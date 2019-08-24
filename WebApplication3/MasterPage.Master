@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication3.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+ <meta charset="utf-8">
+
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/mobiscroll.javascript.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <title>Students Management System </title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <center>
+        Students Management System
+      </center>
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-family: "Segoe UI";
+            font-size: x-large;
+            color: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <form id="form1" runat="server">
+
+        <div id="header">
+            <asp:Label ID="lblUser" runat="server" Text="Label" Visible="False" CssClass="auto-style1"></asp:Label>
+        </div>
+
+        <div id="nav">
+            <div>
+                <a href="frmInsertStudent.aspx">Create Student</a>
+                <br />
+                <a href="frmEditStudents.aspx">Students Report</a>
+            </div>
+        </div>
+
+        <div id="section">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer">
+            2019 - JS Solutions
+            <br>
+            <a href="http://www.josivansantos.com">www.josivansantos.com</a>
+        </div>
+    </form>
+</body>
+</html>
